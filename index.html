@@ -21,6 +21,43 @@
             <li>РАЗВЛЕЧЕНИЯ</li>
         </ul>
     </nav>
-    <button class="first-button">Login</button>gi
+    <button class="first-button">Login</button>
+</header>
+<!-- 
+  <h1>Конвертер валют онлайн</h1> -->
+  <div class="currency-converter-container">
+      
+    
+    <div class="input-container">
+      <label for="amount">Введите сумму</label>
+      <input id="amount" type="text" placeholder="Введите сумму" />
+      <select id="from-currency">
+        <option value="RUB">RUB</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      
+      </select>
+    </div>
+
+    
+    <div class="output-container">
+      <label for="converted-amount">Результат конвертации</label>
+      <input id="converted-amount" type="text" placeholder="Результат" readonly />
+      <select id="to-currency">
+        <option value="USD">USD</option>
+        <option value="RUB">RUB</option>
+        <option value="EUR">EUR</option>
+        
+      </select>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button id="convert-btn">Конвертировать</button>
+    <div id="error-message" class="hidden">Произошла ошибка, попробуйте позже.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 
 
