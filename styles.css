@@ -2,91 +2,113 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-  }
-  
-  header {
+    background-color: #f9f9f9;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: rgba(189, 189, 228, 0.753);
-    color: white;
-    /* width: 1152px; */
-height: 50px;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6c63ff;
+}
 
-  }
-  
-  #logo {
-    height: 50px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav ul li {
-    cursor: pointer;
-  }
-  
-  .first-button {
-    background-color: #4CAF50;
-    color: white;
+.logo span {
+    color: #000;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-btn {
     padding: 10px 20px;
+    background-color: #6c63ff;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .first-button:hover {
-    background-color: #45a049;
-  }
-  
-  .currency-converter-container {
+    font-size: 14px;
+}
+
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.converter {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .input-container, .output-container {
+    gap: 20px;
+}
+
+.currency-box {
+    flex: 1;
+    text-align: center;
+}
+
+.currency-input {
+    margin-top: 10px;
+}
+
+.currency-tabs {
     display: flex;
-    flex-direction: column;
-    width: 45%;
-  }
-  
-  input, select {
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-  }
-  
-  button {
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.tab {
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  #error-message {
+    background-color: #fff;
+}
+
+.tab.active {
+    background-color: #6c63ff;
+    color: #fff;
+    border-color: #6c63ff;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.exchange-rate {
+    font-size: 14px;
+    color: #555;
+}
+
+.error-message {
     color: red;
-    margin-top: 20px;
-  }
-  
-  .hidden {
-    display: none;
-  }
+    margin-top: 10px;
+    font-size: 14px;
+}

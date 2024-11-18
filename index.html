@@ -1,63 +1,59 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valyuta Çeviricisi</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valyuta Çeviricisi</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <img src="assets/Asset 1@3x 1.svg" id="logo">
-
-    <nav>
-        <ul>
-            <li>БАНК</li>
-            <li>БИЗНЕС</li>
-            <li>ИНВЕСТИЦИИ</li>
-            <li>СТРАХОВАНИЕ</li>
-            <li>МОБАЙЛ</li>
-            <li>ПУТЕШЕСТВИЯ</li>
-            <li>РАЗВЛЕЧЕНИЯ</li>
-        </ul>
-    </nav>
-    <button class="first-button">Login</button>
-</header>
-<!-- 
-  <h1>Конвертер валют онлайн</h1> -->
-  <div class="currency-converter-container">
-      
-    
-    <div class="input-container">
-      <label for="amount">Введите сумму</label>
-      <input id="amount" type="text" placeholder="Введите сумму" />
-      <select id="from-currency">
-        <option value="RUB">RUB</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-      
-      </select>
-    </div>
-
-    
-    <div class="output-container">
-      <label for="converted-amount">Результат конвертации</label>
-      <input id="converted-amount" type="text" placeholder="Результат" readonly />
-      <select id="to-currency">
-        <option value="USD">USD</option>
-        <option value="RUB">RUB</option>
-        <option value="EUR">EUR</option>
-        
-      </select>
-    </div>
-  </div>
-
-  <div class="button-container">
-    <button id="convert-btn">Конвертировать</button>
-    <div id="error-message" class="hidden">Произошла ошибка, попробуйте позже.</div>
-  </div>
-
-  <script src="script.js"></script>
+    <header>
+        <div class="logo">bank<span>a</span></div>
+        <nav>
+            <a href="#">BANK</a>
+            <a href="#">BİZNES</a>
+            <a href="#">İNVESTİSİYA</a>
+            <a href="#">SIĞORTA</a>
+            <a href="#">MOBİL</a>
+            <a href="#">SƏYAHƏT</a>
+            <a href="#">ƏYLƏNCƏ</a>
+        </nav>
+        <button class="login-btn">GİRİŞ</button>
+    </header>
+    <main>
+        <h1>Konverter valyut onlayn</h1>
+        <div class="converter">
+            <div class="currency-box">
+                <h2>Məndə var</h2>
+                <div class="currency-input">
+                    <div class="currency-tabs">
+                        <button class="tab active" data-currency="RUB">RUB</button>
+                        <button class="tab" data-currency="USD">USD</button>
+                        <button class="tab" data-currency="EUR">EUR</button>
+                        <button class="tab" data-currency="GBP">GBP</button>
+                    </div>
+                    <input type="number" id="input-amount" value="5000" min="0" step="0.01">
+                    <p class="exchange-rate" id="exchange-rate-left">1 RUB = 0.0135 USD</p>
+                </div>
+            </div>
+            <div class="currency-box">
+                <h2>İstəyirəm</h2>
+                <div class="currency-input">
+                    <div class="currency-tabs">
+                        <button class="tab" data-currency="RUB">RUB</button>
+                        <button class="tab active" data-currency="USD">USD</button>
+                        <button class="tab" data-currency="EUR">EUR</button>
+                        <button class="tab" data-currency="GBP">GBP</button>
+                    </div>
+                    <input type="text" id="output-amount" readonly>
+                    <p class="exchange-rate" id="exchange-rate-right">1 USD = 73.8896 RUB</p>
+                </div>
+            </div>
+        </div>
+        <p class="error-message" id="error-message"></p>
+    </main>
+    <script src="script.js"></script>
 </body>
+</html>
 
 
