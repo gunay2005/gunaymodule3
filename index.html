@@ -2,58 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valyuta Çeviricisi</title>
+    <title>Currency Converter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">bank<span>a</span></div>
+        <img src= "Asset 1@3x 1 (2).svg" id="logo">
+
         <nav>
-            <a href="#">BANK</a>
-            <a href="#">BİZNES</a>
-            <a href="#">İNVESTİSİYA</a>
-            <a href="#">SIĞORTA</a>
-            <a href="#">MOBİL</a>
-            <a href="#">SƏYAHƏT</a>
-            <a href="#">ƏYLƏNCƏ</a>
+            <ul>
+                <li class="list"></li>
+                <li>БИЗНЕС</li>
+                <li>ИНВЕСТИЦИИ</li>
+                <li>СТРАХОВАНИЕ</li>
+                <li>МОБАЙЛ</li>
+                <li>ПУТЕШЕСТВИЯ</li>
+                <li>РАЗВЛЕЧЕНИЯ</li>
+            </ul>
         </nav>
-        <button class="login-btn">GİRİŞ</button>
+        <button class="first-button">Login</button>
     </header>
-    <main>
-        <h1>Konverter valyut onlayn</h1>
-        <div class="converter">
-            <div class="currency-box">
-                <h2>Məndə var</h2>
-                <div class="currency-input">
-                    <div class="currency-tabs">
-                        <button class="tab active" data-currency="RUB">RUB</button>
-                        <button class="tab" data-currency="USD">USD</button>
-                        <button class="tab" data-currency="EUR">EUR</button>
-                        <button class="tab" data-currency="GBP">GBP</button>
-                    </div>
-                    <input type="number" id="input-amount" value="5000" min="0" step="0.01">
-                    <p class="exchange-rate" id="exchange-rate-left">1 RUB = 0.0135 USD</p>
+
+    <div class="maincontainer">
+        <h1>Конвертер валют онлайн</h1>
+          <!-- Элемент для вывода ошибки -->
+          <p id="errorMessage" style="color: red; display: none;">Ошибка! Нет подключения к интернету. Невозможно обновить курс валют.</p>
+
+        <div class="input-section">
+
+            <div class="input-block">
+                <label>У меня есть </label>
+                <div class="currency-tabs" id="fromCurrencyTabs">
+                    <button class="tab active" id="fromRUB">RUB</button>
+                    <button class="tab" id="fromUSD">USD</button>
+                    <button class="tab" id="fromEUR">EUR</button>
+                    <button class="tab" id="fromGBP">GBP</button>
+                </div>
+                <div class="covertmain">
+                    <input type="number" id="inputAmount" value="5000">
+                    <p id="inputCurrencyRate" class="currency-rate"></p> 
                 </div>
             </div>
-            <div class="currency-box">
-                <h2>İstəyirəm</h2>
-                <div class="currency-input">
-                    <div class="currency-tabs">
-                        <button class="tab" data-currency="RUB">RUB</button>
-                        <button class="tab active" data-currency="USD">USD</button>
-                        <button class="tab" data-currency="EUR">EUR</button>
-                        <button class="tab" data-currency="GBP">GBP</button>
-                    </div>
-                    <input type="text" id="output-amount" readonly>
-                    <p class="exchange-rate" id="exchange-rate-right">1 USD = 73.8896 RUB</p>
+
+            <div class="output-block">
+                <label>Хочу приобрести</label>
+                <div class="currency-tabs" id="toCurrencyTabs">
+                    <button class="tab" id="toRUB">RUB</button>
+                    <button class="tab active" id="toUSD">USD</button>
+                    <button class="tab" id="toEUR">EUR</button>
+                    <button class="tab" id="toGBP">GBP</button>
+                </div>
+                <div class="covertmain">
+                    <input type="number" id="outputAmount" value="67.6685" readonly>
+                    <p id="outputCurrencyRate" class="currency-rate"></p> 
                 </div>
             </div>
+
         </div>
-        <p class="error-message" id="error-message"></p>
-    </main>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
-
